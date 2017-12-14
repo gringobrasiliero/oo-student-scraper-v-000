@@ -46,7 +46,7 @@ doc.css(".social-icon-container a").each do |link|
 
 
   end #.each do
-  scraped_student[:profile_quote] = doc.css("vitals-text-container .profile_quote").text.strip
+  scraped_student[:profile_quote] = doc.css("vitals-text-container .profile_quote")
 scraped_student[:bio] = doc.css(".bio-content .description-holder").text.strip
   scraped_student
 end #self.scrape_profile_page(profile_url)
