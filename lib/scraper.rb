@@ -39,6 +39,8 @@ doc.css(".social-icon-container a").each do |link|
          scraped_student[:twitter] = link["href"]
        elsif link["href"].include?("github")
          scraped_student[:github] = link["href"]
+       elsif link["href"].include?("linkedin")
+         scraped_student[:linkedin] = link["href"]
        end
 
   end
