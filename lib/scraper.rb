@@ -34,7 +34,7 @@ end
     html = open("./fixtures/student-site/index.html")
     profile_page = Nokogiri::HTML(open(profile_url)
 
-scraped_student = {}
+#scraped_student = {}
 
   end
 
