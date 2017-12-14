@@ -18,7 +18,7 @@ end
 
 
   def add_student_attributes(attributes_hash)
-
+@name = attributes_hash[:name]
   end
 
 
