@@ -23,6 +23,7 @@ end
 @blog = attributes_hash[:blog]
 @linkedin = attributes_hash[:linkedin]
 @profile_quote = attributes_hash[:profile_quote]
+@twitter = attributes_hash[:twitter]
   end
 
 
