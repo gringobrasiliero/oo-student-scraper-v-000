@@ -37,11 +37,11 @@ scraped_student = {}
 doc.css(".social-icon-container a").each do |link|
   if link["href"].include?("twitter")
          scraped_student[:twitter] = link["href"]
-       elsif link["href"].include?("github")
-         scraped_student[:github] = link["href"]
        elsif link["href"].include?("linkedin")
          scraped_student[:linkedin] = link["href"]
-       elsif scraped_student[:blog] = link["href"]
+       elsif link["href"].include?("github")
+         scraped_student[:github] = link["href"]
+              elsif scraped_student[:blog] = link["href"]
        end
 
   end
