@@ -20,7 +20,7 @@ end
   def add_student_attributes(attributes_hash)
 
 @bio = attributes_hash[:bio]
-@blog = attributes_hash[:bio]
+@blog = attributes_hash[:blog]
   end
 
 
