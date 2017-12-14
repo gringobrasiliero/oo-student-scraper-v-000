@@ -32,7 +32,13 @@ end
   def self.scrape_profile_page(profile_url)
     html = open("./fixtures/student-site/index.html")
     doc = Nokogiri::HTML(open(profile_url))
-binding.pry
+student_profile = {}
+
+doc.css(".social-icon-container a").each do |link|
+  if link["href"].include?("twitter")
+         student_profile[:twitter] = link["href"]
+       end
+
   end
 
 end
