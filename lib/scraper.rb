@@ -38,7 +38,8 @@ doc.css(".social-icon-container a").each do |link|
   if link["href"].include?("twitter")
          student_profile[:twitter] = link["href"]
        end
-
+elsif link["href"].include?("github")
+  student_profile[:twitter] = link["href"]
   end
   student_profile
 end
