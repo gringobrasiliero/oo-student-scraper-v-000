@@ -21,7 +21,7 @@ scraped_students = []
   :location => index.css(".student-location").text,
   :profile_url => index.css("a").attribute("href").value
 
-
+binding.pry
 }
 
 end
@@ -30,7 +30,17 @@ end
 
 
   def self.scrape_profile_page(profile_url)
+    html = open("./fixtures/student-site/index.html")
+    doc = Nokogiri::HTML(html)
+scraped_student = {}
+
 
   end
 
-end
+
+
+
+
+
+
+end #of class scraper
