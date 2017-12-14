@@ -32,15 +32,14 @@ end
   def self.scrape_profile_page(profile_url)
     html = open("./fixtures/student-site/index.html")
     doc = Nokogiri::HTML(open(profile_url))
-scraped_student = {}
+student_profile = {}
 
 doc.css(".social-icon-container a").each do |link|
   if link["href"].include?("twitter")
-         scraped_student[:twitter] = link["href"]
-elsif link["href"].include?("github")
-  scraped_student[:github] = link["href"]
+         student_profile[:twitter] = link["href"]
+       end
+
   end
-  scraped_student
-end
+  student_profile
 end
 end
