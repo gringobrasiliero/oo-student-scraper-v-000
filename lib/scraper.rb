@@ -30,7 +30,7 @@ end
 
 
   def self.scrape_profile_page(profile_url)
-binding.pry
+
     html = open("./fixtures/student-site/index.html")
     profile_page = Nokogiri::HTML(open(profile_url)
 
