@@ -43,7 +43,7 @@ doc.css(".social-icon-container a").each do |link|
          scraped_student[:github] = link["href"]
               elsif scraped_student[:blog] = link["href"]
        end #if statements
-      
+
 
   end #.each do
   scraped_student[:profile_quote] = doc.css(".profile_quote").text
