@@ -35,7 +35,7 @@ binding.pry
     profile_page = Nokogiri::HTML(open(profile_url))
 
 scraped_student = {}
-
+icons = profile_page.css(".social-icon-container").children.css("a").map { |a| a.attribute("href").value}
 
   end
 
