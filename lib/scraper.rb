@@ -43,3 +43,4 @@ elsif link["href"].include?("github")
   student_profile
 end
 end
+end
