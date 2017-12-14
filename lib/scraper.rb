@@ -11,7 +11,7 @@ class Scraper
   def self.scrape_index_page(index_url)
 # for each student, parse the name (class 'student-name', location (class 'student-location') profile_url (a href)
 html = open("./fixtures/student-site/index.html")
-doc = Nokogiri::HTML(html)
+doc = Nokogiri::HTML(open(index_url))
 
 student_name = doc.css(".student-card")
 scraped_students = []
@@ -32,10 +32,9 @@ end
   def self.scrape_profile_page(profile_url)
 binding.pry
     html = open("./fixtures/student-site/index.html")
-    profile_page = Nokogiri::HTML(open(profile_url))
+    profile_page = Nokogiri::HTML(open(profile_url)
 
 scraped_student = {}
-icons = profile_page.css(".social-icon-container").children.css("a").map { |a| a.attribute("href").value}
 
   end
 
