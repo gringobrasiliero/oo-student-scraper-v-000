@@ -40,5 +40,5 @@ doc.css(".social-icon-container a").each do |link|
        end
 
   end
-
+end
 end
