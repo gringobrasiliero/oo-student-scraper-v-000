@@ -22,6 +22,7 @@ end
 @bio = attributes_hash[:bio]
 @blog = attributes_hash[:blog]
 @linkedin = attributes_hash[:linkedin]
+@profile_quote = attributes_hash[:profile_quote]
   end
 
 
