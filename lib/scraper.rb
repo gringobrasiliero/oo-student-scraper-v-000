@@ -24,9 +24,9 @@ scraped_students = []
 
 }
 
-end
+end #.each do
 scraped_students
-end
+end #self.scrape_index_page(index_url)
 
 
   def self.scrape_profile_page(profile_url)
@@ -42,11 +42,11 @@ doc.css(".social-icon-container a").each do |link|
        elsif link["href"].include?("github")
          scraped_student[:github] = link["href"]
               elsif scraped_student[:blog] = link["href"]
-       end
+       end #if statements
+       scraped_student[:profile_quote] = doc.css(".profile_quote").text
+     scraped_student[:bio] = doc.css(".bio-content .description-holder .p").text
 
-  end
-  scraped_student[:profile_quote] = doc.css(".profile_quote").text
-scraped_student[:bio] = doc.css(".bio-content .description-holder .p").text
+  end #.each do
   scraped_student
-end
-end
+end #self.scrape_profile_page(profile_url)
+end #class Scraper
