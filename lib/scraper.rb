@@ -11,7 +11,7 @@ class Scraper
   def self.scrape_index_page(index_url)
 # for each student, parse the name (class 'student-name', location (class 'student-location') profile_url (a href)
 html = open("./fixtures/student-site/index.html")
-doc = Nokogiri::HTML(html)
+doc = Nokogiri::HTML(open(index_url))
 
 student_name = doc.css(".student-card")
 scraped_students = []
