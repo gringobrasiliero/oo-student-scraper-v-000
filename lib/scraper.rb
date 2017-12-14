@@ -23,7 +23,7 @@ scraped_students = []
 
 
 }
-binding.pry
+
 end
 scraped_students
 end
@@ -31,9 +31,10 @@ end
 
   def self.scrape_profile_page(profile_url)
     html = open("./fixtures/student-site/index.html")
-    doc = Nokogiri::HTML(html)
-scraped_student = {}
+    profile_page = Nokogiri::HTML(open(profile_url))
 
+scraped_student = {}
+binding.pry
 
   end
 
