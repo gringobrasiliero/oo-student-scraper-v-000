@@ -21,9 +21,9 @@ scraped_students = []
   :location => index.css(".student-location").text,
   :profile_url => index.css("a").attribute("href").value
 
-binding.pry
-}
 
+}
+binding.pry
 end
 scraped_students
 end
