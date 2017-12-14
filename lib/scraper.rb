@@ -5,9 +5,6 @@ require 'nokogiri'
 
 class Scraper
 
-
-
-
   def self.scrape_index_page(index_url)
 # for each student, parse the name (class 'student-name', location (class 'student-location') profile_url (a href)
 html = open("./fixtures/student-site/index.html")
@@ -20,11 +17,9 @@ scraped_students = []
   :name => index.css(".student-name").text,
   :location => index.css(".student-location").text,
   :profile_url => index.css("a").attribute("href").value
-
-
 }
 
-end
+
 scraped_students
 end
 
